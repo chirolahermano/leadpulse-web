@@ -29,10 +29,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
-        @media (min-width: 1024px) {
-            html { scroll-padding-top: 5rem; }
-        }
         ::selection { background: #00FFFF33; color: #fff; }
     </style>
 </head>
@@ -41,31 +37,22 @@
     <!-- ========== HEADER ========== -->
     <header class="fixed top-0 left-0 right-0 z-50 border-b border-[#00FFFF]/20 bg-[#070A10]/95 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="relative flex items-center justify-between gap-4 py-4">
-                <a href="#inicio" class="flex items-center gap-2 group shrink-0 z-10" aria-label="LeadPulse inicio">
+            <div class="relative flex items-center justify-center lg:justify-start py-4">
+                <a href="#" onclick="cambiarSeccion('inicio'); return false;" class="flex items-center gap-2 group shrink-0 lg:absolute lg:left-0 z-10" aria-label="LeadPulse inicio">
                     <img src="logo.png" alt="LeadPulse Logo" class="h-10 sm:h-12 object-contain transition-opacity group-hover:opacity-90">
                 </a>
 
                 <nav aria-label="Navegación principal" class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6 xl:gap-10">
-                    <a href="#inicio" class="font-sans text-sm text-gray-300 hover:text-[#00FFFF] transition-colors duration-200 whitespace-nowrap">Inicio</a>
-                    <a href="#capacidades" class="font-sans text-sm text-gray-300 hover:text-[#00FFFF] transition-colors duration-200 whitespace-nowrap">Capacidades del Sistema</a>
-                    <a href="#portafolio" class="font-sans text-sm text-gray-300 hover:text-[#00FFFF] transition-colors duration-200 whitespace-nowrap">Portafolio del Fundador</a>
+                    <a href="#" onclick="cambiarSeccion('inicio'); return false;" class="font-sans text-sm text-gray-300 hover:text-[#00FFFF] transition-colors duration-200 whitespace-nowrap">Inicio</a>
+                    <a href="#" onclick="cambiarSeccion('capacidades'); return false;" class="font-sans text-sm text-gray-300 hover:text-[#00FFFF] transition-colors duration-200 whitespace-nowrap">Capacidades del Sistema</a>
+                    <a href="#" onclick="cambiarSeccion('portafolio'); return false;" class="font-sans text-sm text-gray-300 hover:text-[#00FFFF] transition-colors duration-200 whitespace-nowrap">Portafolio del Fundador</a>
                 </nav>
-
-                <a
-                    href="https://wa.me/5491126765649?text=Hola%20buenas%20todo%20bien%20estoy%20interesado%2C%20pasame%20un%20presupuesto%20o%20algo%20asi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="font-mono text-xs sm:text-sm shrink-0 z-10 text-[#00FFFF] border border-[#00FFFF] px-3 sm:px-5 py-2 rounded hover:bg-[#00FFFF] hover:text-[#070A10] transition-all duration-300 shadow-[0_0_12px_rgba(0,255,255,0.15)] hover:shadow-[0_0_20px_rgba(0,255,255,0.35)]"
-                >
-                    &gt; CONTACTAR_AHORA
-                </a>
             </div>
 
             <nav aria-label="Navegación móvil" class="lg:hidden flex justify-center items-center gap-4 sm:gap-6 pb-3 border-t border-[#00FFFF]/10 overflow-x-auto">
-                <a href="#inicio" class="font-sans text-xs sm:text-sm text-gray-300 hover:text-[#00FFFF] transition-colors whitespace-nowrap py-1">Inicio</a>
-                <a href="#capacidades" class="font-sans text-xs sm:text-sm text-gray-300 hover:text-[#00FFFF] transition-colors whitespace-nowrap py-1">Capacidades del Sistema</a>
-                <a href="#portafolio" class="font-sans text-xs sm:text-sm text-gray-300 hover:text-[#00FFFF] transition-colors whitespace-nowrap py-1">Portafolio del Fundador</a>
+                <a href="#" onclick="cambiarSeccion('inicio'); return false;" class="font-sans text-xs sm:text-sm text-gray-300 hover:text-[#00FFFF] transition-colors whitespace-nowrap py-1">Inicio</a>
+                <a href="#" onclick="cambiarSeccion('capacidades'); return false;" class="font-sans text-xs sm:text-sm text-gray-300 hover:text-[#00FFFF] transition-colors whitespace-nowrap py-1">Capacidades del Sistema</a>
+                <a href="#" onclick="cambiarSeccion('portafolio'); return false;" class="font-sans text-xs sm:text-sm text-gray-300 hover:text-[#00FFFF] transition-colors whitespace-nowrap py-1">Portafolio del Fundador</a>
             </nav>
         </div>
     </header>
@@ -89,7 +76,8 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a
-                        href="#capacidades"
+                        href="#"
+                        onclick="cambiarSeccion('capacidades'); return false;"
                         class="font-mono w-full sm:w-auto text-[#00FFFF] border border-[#00FFFF] px-8 py-3 rounded hover:bg-[#00FFFF]/10 transition-all duration-300"
                     >
                         &gt; VER_SERVICIOS
@@ -107,7 +95,7 @@
         </section>
 
         <!-- ========== SECCIÓN 1: SERVICIOS Y AUTORIDAD ========== -->
-        <section id="capacidades" class="border-t border-[#00FFFF]/10 bg-[#070A10] py-20 sm:py-24">
+        <section id="capacidades" class="hidden border-t border-[#00FFFF]/10 bg-[#070A10] py-20 sm:py-24">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <h2 class="font-mono text-2xl sm:text-3xl text-[#00FFFF] mb-4 tracking-wide">
                     &gt; CAPACIDADES_DEL_SISTEMA
@@ -150,7 +138,7 @@
         </section>
 
         <!-- ========== SECCIÓN 2: PORTAFOLIO DEL FUNDADOR ========== -->
-        <section id="portafolio" class="border-t border-[#00FFFF]/10 py-20 sm:py-24">
+        <section id="portafolio" class="hidden border-t border-[#00FFFF]/10 py-20 sm:py-24">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
                 <h2 class="font-mono text-2xl sm:text-3xl text-[#00FFFF] mb-8 tracking-wide">
                     &gt; ARCHIVO_DEL_FUNDADOR
@@ -235,6 +223,18 @@
             WhatsApp
         </span>
     </a>
+
+    <script>
+        function cambiarSeccion(seccionId) {
+            var secciones = ['inicio', 'capacidades', 'portafolio'];
+            secciones.forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+            var activa = document.getElementById(seccionId);
+            if (activa) activa.classList.remove('hidden');
+        }
+    </script>
 
 </body>
 </html>
